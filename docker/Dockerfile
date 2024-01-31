@@ -48,6 +48,5 @@ EXPOSE 25575/tcp
 WORKDIR /home/steam
 
 # # Run the Palworld dedicated server using SteamCMD with the provided Steam credentials
-# ENTRYPOINT ["/home/steam/Steamapps/common/PalServer/PalServer.sh"]
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["/home/steam/Steam/steamapps/common/PalServer/PalServer.sh"]
 
