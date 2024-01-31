@@ -27,13 +27,14 @@ RUN mkdir -p /home/steam/Steam && \
 RUN /home/steam/Steam/steamcmd.sh +login anonymous +app_update 2394010 validate +quit && \
     rm -rf /home/steam/Steam/steamapps/common/PalServer/steamclient.so && \
     cp /home/steam/Steam/steamapps/common/PalServer/linux64/steamclient.so /home/steam/Steam/steamapps/common/PalServer/ && \
-echo "ServerName=PalWorld" > /home/steam/Steam/steamapps/common/PalServer/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini && \
-echo "ServerDescription=A simple PalWorld" >> /home/steam/Steam/steamapps/common/PalServer/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini && \
-echo "AdminPassword=1lonelyduck" >> /home/steam/Steam/steamapps/common/PalServer/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini && \ 
-echo "ServerPlayerMaximum=8" >> /home/steam/Steam/steamapps/common/PalServer/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini && \ 
-echo "PublicPort=8211" >> /home/steam/Steam/steamapps/common/PalServer/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini && \   
-echo "Difficulty=normal" >> /home/steam/Steam/steamapps/common/PalServer/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini && \ 
-echo "IsMultiplay=true" >> /home/steam/Steam/steamapps/common/PalServer/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+    mkdir -p /home/steam/Steam/steamapps/common/PalServer/Pal/Saved/Config/LinuxServer && \
+    echo "ServerName=PalWorld" > /home/steam/Steam/steamapps/common/PalServer/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini && \
+    echo "ServerDescription=A simple PalWorld" >> /home/steam/Steam/steamapps/common/PalServer/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini && \
+    echo "AdminPassword=1lonelyduck" >> /home/steam/Steam/steamapps/common/PalServer/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini && \ 
+    echo "ServerPlayerMaximum=8" >> /home/steam/Steam/steamapps/common/PalServer/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini && \ 
+    echo "PublicPort=8211" >> /home/steam/Steam/steamapps/common/PalServer/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini && \   
+    echo "Difficulty=normal" >> /home/steam/Steam/steamapps/common/PalServer/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini && \ 
+    echo "IsMultiplay=true" >> /home/steam/Steam/steamapps/common/PalServer/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
 
 
 # Done installing and configuring game, move on to runtime stuff
